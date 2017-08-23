@@ -14,10 +14,9 @@ Vagrant.configure("2") do |config|
   config.vm.box_check_update = false
 
   # Set up networking 
-  config.vm.network "private_network", ip: "192.168.33.33" 
+  config.vm.network "private_network", ip: "192.168.33.34" 
 
-  # Provision Jenkins
-  config.vm.provision "shell", path: "install_jenkins.sh"
-  config.vm.provision "shell", inline: "su - jenkins -c /vagrant/configure_jenkins.sh"
+  # Provision Wordpress
+  config.vm.provision "shell", path: "install_wordpress.sh"
 
 end
